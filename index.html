@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Personal Blog - IT Influencer</title>
+  <style>
+    :root {
+      --bg-color-light: #ffffff;
+      --text-color-light: #000000;
+      --bg-color-dark: #1c1c1c;
+      --text-color-dark: #f5f5f5;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header {
+      padding: 1rem;
+      text-align: center;
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+
+    .light-mode {
+      background-color: var(--bg-color-light);
+      color: var(--text-color-light);
+    }
+
+    .toggle-button {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: var(--bg-color-dark);
+      color: var(--text-color-dark);
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <header>
+    <h1>Welcome to My IT Influencer Blog</h1>
+    <p>Sharing the latest trends and tips in technology!</p>
+  </header>
+
+  <button class="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
+
+  <main>
+    <h2>Latest Blog Post</h2>
+    <p>Stay tuned for my upcoming blog post where I dive deep into the world of AI, cloud computing, and the future of IT!</p>
+  </main>
+
+  <footer>
+    <p>Connect with me on social media: <a href="#">Twitter</a> | <a href="#">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    function toggleMode() {
+      const body = document.body;
+      body.classList.toggle('dark-mode');
+      body.classList.toggle('light-mode');
+    }
+  </script>
+</body>
+</html>
